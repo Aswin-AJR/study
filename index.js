@@ -289,3 +289,67 @@ for (let i = 0; str2.split('').sort().length > i; i++) {
 
 // console.log('%c⧭', 'color: #ffcc00', newArr2.join(''));
 // ----------------------------------------------------------------------------------------------
+
+
+let array2 = [1, 2, 3, 3, 3, 2, 2, 1,]
+let NewArray = []
+
+function getFilterObject() {
+    let ob = {}
+    for (let data of array2) {
+        if (!ob[data]) {
+            ob[data] = true
+            NewArray.push(data)
+        }
+    }
+}
+// getFilterObject()
+// const set = new Set(array2)
+// console.log('%c⧭', 'color: #731d1d', Array.from(new Set(array2)));
+
+// console.log('%c⧭', 'color: #ffa640', NewArray);
+
+// (() => {
+//     console.log("TEST")
+// })()
+
+function gwtOddOrEven(num) {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (num % 2 == 0) {
+                resolve(num + "" + "is even")
+            } else {
+                reject(num + "" + "is odd")
+            }
+        }, 1000)
+    })
+
+}
+
+// gwtOddOrEven(10).then(data => console.log(data)).catch(data => console.log(data))
+
+
+// ---------------------------- function decleration
+
+function sampleFunction(num) {
+    return num * num
+}
+// console.log('%c⧭', 'color: #807160', sampleFunction(2));
+
+// ---------------------------- function expresion
+
+const sampleFunc = function (num) {
+    return num + num
+}
+
+// console.log('%c⧭', 'color: #007300',sampleFunc(5));
+
+// ----------------------------- Arrow function
+
+const sampleFunction1 = (num) => {
+    return num - num
+}
+
+console.log('%c⧭', 'color: #006dcc', sampleFunction1(7));
+
